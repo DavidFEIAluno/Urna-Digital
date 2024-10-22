@@ -1,3 +1,3 @@
-# Projeto-2-Nome-ainda-a-escolher-
+# Urna Eletrônica-
 
 Jogo de aventura em texto, ou sistema de votação
