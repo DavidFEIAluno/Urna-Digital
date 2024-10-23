@@ -1,0 +1,18 @@
+Usuario* login_usuario(Usuario usuarios[], int total_usuarios) {
+    char cpf[15];
+    printf("CPF para login: ");
+    scanf("%s", cpf);
+
+    for (int i = 0; i < total_usuarios; i++) {
+        if (strcmp(usuarios[i].cpf, cpf) == 0) {
+            if (usuarios[i].votou) {
+                printf("Usuário já votou! Login não permitido.\n");
+                return NULL;
+            }
+            printf("Login realizado com sucesso!\n");
+            return &usuarios[i];
+        }
+    }
+    printf("CPF não encontrado!\n");
+    return NULL;
+}
