@@ -1,0 +1,24 @@
+void cadastrar_usuario(Usuario usuarios[], int *total_usuarios)
+    if (*total_usuarios >= MAX_USUARIOS) { printf("Número máximo de usuários atingido!\n");
+        return;
+    }
+    Usuario novo_usuario;
+    printf("Nome do usuário: ");
+    scanf("%s", novo_usuario.nome);
+
+    do {
+        printf("CPF (formato xxx.xxx.xxx-xx): ");
+        scanf("%s", novo_usuario.cpf);
+    } while (!validar_cpf(novo_usuario.cpf));
+
+    do {
+        printf("RG (formato xx.xxx.xxx-x): ");
+        scanf("%s", novo_usuario.rg);
+    } while (!validar_rg(novo_usuario.rg));
+
+    novo_usuario.votou = 0;
+    usuarios[*total_usuarios] = novo_usuario;
+    (*total_usuarios)++;
+
+    printf("Usuário cadastrado com sucesso!\n");
+} 
