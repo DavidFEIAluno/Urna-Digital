@@ -1,0 +1,15 @@
+#define MAX_USUARIOS 100
+#define MAX_CANDIDATOS 5
+
+typedef struct {
+    char nome[100];
+    char cpf[15];
+    char rg[10];
+    int votou; // Flag para verificar se o usuário já votou
+} Usuario;
+
+typedef struct {
+    char nome[100];
+    int numero;
+    int votos;
+} Candidato;
