@@ -1,5 +1,3 @@
-# Urna Digital
+# Exibir Candidatos
 
-Uma urna
-
-Funcionamento do Código a ser escrito
+A função mostrar_candidatos() exibe a lista de candidatos com seus nomes e números.
