@@ -1,5 +1,3 @@
-# Urna Digital
+# Código Finalizado
 
-Uma urna
-
-Funcionamento do Código a ser escrito
+Principal código, finalizado, corrigido e aprimorado, adcionando mais nomes e etc.
