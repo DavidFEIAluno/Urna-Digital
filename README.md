@@ -1,5 +1,3 @@
-# Urna Digital
+# Menu Principal
 
-Uma urna
-
-Funcionamento do Código a ser escrito
+O main() contém o loop principal que gerencia as opções do usuário, como cadastrar, logar, votar, ver candidatos, e encerrar a votação.
