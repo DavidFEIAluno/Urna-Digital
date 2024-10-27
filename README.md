@@ -1,5 +1,5 @@
-# Urna Digital
+# Encerrar a Votação e Anunciar o Vencedor
 
-Uma urna
+A função encerrar_votacao() encontra o candidato com mais votos e exibe o vencedor.
 
-Funcionamento do Código a ser escrito
+Se ninguém votou, exibe a mensagem "Nenhum voto registrado".
