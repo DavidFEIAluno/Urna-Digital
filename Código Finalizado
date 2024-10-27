@@ -107,22 +107,42 @@ void votar(Candidato *candidatos, int n, Usuario *usuario) {
     }
 }
 
-// Função para encerrar a votação e exibir o vencedor
+// Função para encerrar a votação e exibir o vencedor ou um empate
 void encerrar_votacao(Candidato *candidatos, int n) {
     int max_votos = -1;
-    char vencedor[MAX_NOME];
+    int num_empates = 0;
+    char vencedores[MAX_CANDIDATOS][MAX_NOME]; // Lista para guardar candidatos empatados
+
     printf("\nResultado da votação:\n");
 
+    // Identifica o número máximo de votos
     for (int i = 0; i < n; i++) {
         printf("%s recebeu %d votos.\n", candidatos[i].nome, candidatos[i].votos);
         if (candidatos[i].votos > max_votos) {
             max_votos = candidatos[i].votos;
-            strcpy(vencedor, candidatos[i].nome);
         }
     }
 
-    printf("O vencedor é: %s com %d votos!\n", vencedor, max_votos);
+    // Conta quantos candidatos possuem o número máximo de votos e guarda seus nomes
+    for (int i = 0; i < n; i++) {
+        if (candidatos[i].votos == max_votos) {
+            strcpy(vencedores[num_empates], candidatos[i].nome);
+            num_empates++;
+        }
+    }
+
+    // Verifica se houve empate
+    if (num_empates > 1) {
+        printf("\nEmpate! Os candidatos com %d votos são:\n", max_votos);
+        for (int i = 0; i < num_empates; i++) {
+            printf("- %s\n", vencedores[i]);
+        }
+        printf("Devido ao empate, nenhum candidato foi eleito como vencedor.\n");
+    } else {
+        printf("\nO vencedor é: %s com %d votos!\n", vencedores[0], max_votos);
+    }
 }
+
 
 // Função para sortear nomes aleatórios para os candidatos
 void sortear_nomes_candidatos(Candidato *candidatos, int n) {
@@ -272,4 +292,3 @@ int main() {
 
     return 0;
 }
-
