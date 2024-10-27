@@ -1,0 +1,48 @@
+int main() {
+    Usuario usuarios[MAX_USUARIOS];
+    Candidato candidatos[MAX_CANDIDATOS];
+    int total_usuarios = 0;
+    int votacao_encerrada = 0;
+
+    gerar_candidatos(candidatos, MAX_CANDIDATOS);
+
+    while (1) {
+        printf("1. Cadastrar usuário\n");
+        printf("2. Login e votar\n");
+        printf("3. Ver candidatos\n");
+        printf("4. Encerrar votação\n");
+        printf("5. Sair\n");
+        int opcao;
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1:
+                cadastrar_usuario(usuarios, &total_usuarios);
+                break;
+            
+            case 2: {
+                Usuario *usuario_logado = login_usuario(usuarios, total_usuarios);
+                if (usuario_logado != NULL && !votacao_encerrada) {
+                    votar(candidatos, MAX_CANDIDATOS, usuario_logado);
+                }
+                break;
+            }
+            
+            case 3:
+                mostrar_candidatos(candidatos, MAX_CANDIDATOS);
+                break;
+
+            case 4:
+                encerrar_votacao(candidatos, MAX_CANDIDATOS);
+                votacao_encerrada = 1;
+                break;
+
+            case 5:
+                exit(0);
+
+            default:
+                printf("Opção inválida!\n");
+                break;
+        }
+    }
+}
