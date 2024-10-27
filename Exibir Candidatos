@@ -1,0 +1,6 @@
+void mostrar_candidatos(Candidato candidatos[], int total_candidatos) {
+    printf("Candidatos:\n");
+    for (int i = 0; i < total_candidatos; i++) {
+        printf("Candidato: %s, Número: %d\n", candidatos[i].nome, candidatos[i].numero);
+    }
+}
