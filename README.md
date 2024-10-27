@@ -1,5 +1,5 @@
-# Urna Digital
+# Geração Aleatória de Nomes e Números de Candidatos
 
-Uma urna
+A função gerar_candidatos() preenche o array de candidatos com nomes e números aleatórios, mas que são fixos para a execução do programa.
 
-Funcionamento do Código a ser escrito
+Cada candidato começa com 0 votos.
