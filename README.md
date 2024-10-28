@@ -38,3 +38,5 @@ Votação: Ao votar, o sistema valida o número do candidato e, se for válido, 
 Encerramento: A função encerrar_votacao() exibe os resultados e verifica empates.
 
 Esse sistema em C, é um sistema simples, que visou fazer uma Urna eletrônica, a inspiração dessa ideia, foi por conta do periodo atual de eleições, mas nem todos tem acesso ou tempo, seja pela dificuldade de transporte publicos, ou pela rotina de trabalho, essa urna poderia ajudar esse tipo de gente, visando facilitar o acesso, desse período de eleições em nosso país.
+
+Link para o Repositório Git: https://github.com/DavidFEIAluno/Urna-Digital
